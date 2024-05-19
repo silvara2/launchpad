@@ -2,14 +2,14 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: local-example-com
+  name: local-bluecray-info
   namespace: default
 spec:
-  secretName: local-example-com-tls
+  secretName: local-bluecray-info-tls
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
-  commonName: "*.local.example.com"
+  commonName: "*.local.bluecray.info"
   dnsNames:
-  - "local.example.com"
-  - "*.local.example.com"
+  - "local.bluecray.info"
+  - "*.local.bluecray.info"
