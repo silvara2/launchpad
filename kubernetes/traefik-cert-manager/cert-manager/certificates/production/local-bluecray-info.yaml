@@ -6,6 +6,10 @@ metadata:
   namespace: default
 spec:
   secretName: local-bluecray-info-tls
+#  secretTemplate: # see emberstack/reflector https://technotim.live/posts/k8s-reflector/
+#    annotations: 
+#      reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
+#      reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: "namespace-1,namespace-2, namespace-[0-9]*" 
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
